@@ -40,6 +40,8 @@
     "gruntplugin"
   ],
   "dependencies": {
-    "semver": "~2.1.0"
+    "semver": "~2.1.0",
+    "adm-zip": "git://github.com/cthackers/adm-zip#0b0b8fe",
+    "glob": "~3.2.6"
   }
 }
