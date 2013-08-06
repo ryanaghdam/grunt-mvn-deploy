@@ -1,0 +1,45 @@
+{
+  "name": "grunt-mvn-deploy",
+  "description": "Deploy node projects to Maven.",
+  "version": "0.0.1",
+  "homepage": "https://github.com/ryanaghdam/grunt-mvn-deploy",
+  "author": {
+    "name": "Ryan Aghdam",
+    "email": "ryan@ryanaghdam.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ryanaghdam/grunt-mvn-deploy"
+  },
+  "bugs": {
+    "url": "https://github.com/ryanaghdam/grunt-mvn-deploy/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/ryanaghdam/grunt-mvn-deploy/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt": "~0.4.1"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "keywords": [
+    "gruntplugin"
+  ],
+  "dependencies": {
+    "semver": "~2.1.0"
+  }
+}
