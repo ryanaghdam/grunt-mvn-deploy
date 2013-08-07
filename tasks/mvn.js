@@ -11,7 +11,7 @@
 var fs = require("fs");
 var path = require("path");
 var glob = require("glob");
-var AdmZip = require("adm-zip");
+var ZipWriter = require("moxie-zip").ZipWriter;
 
 module.exports = function(grunt) {
   /**
@@ -61,7 +61,7 @@ module.exports = function(grunt) {
    */
   grunt.registerTask("mvn:package", function() {
     // Create a new Zip file
-    var zip = new AdmZip();
+    var zip = new ZipWriter();
 
     // Add each source file
     //
@@ -71,13 +71,15 @@ module.exports = function(grunt) {
     grunt.config.get("mvn.package.sources").forEach(function(e, i, a) {
       glob.sync(e).forEach(function(f, j, b) {
         if(fs.statSync(f).isFile()) {
-          zip.addLocalFile(f, path.dirname(f));
+          zip.addFile(f, f);
         }
       });
     });
 
     // Write the zip file
-    zip.writeZip(g("mvn.file"));
+    zip.saveAs(g("mvn.file"), function() {
+      grunt.verbose.writeln("Wrote " + g("mvn.file"));
+    });
   });
 
   /**

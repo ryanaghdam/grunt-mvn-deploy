@@ -1,7 +1,7 @@
 {
   "name": "grunt-mvn-deploy",
   "description": "Deploy node projects to Maven.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "homepage": "https://github.com/ryanaghdam/grunt-mvn-deploy",
   "author": {
     "name": "Ryan Aghdam",
@@ -40,8 +40,7 @@
     "gruntplugin"
   ],
   "dependencies": {
-    "semver": "~2.1.0",
-    "adm-zip": "git://github.com/cthackers/adm-zip#0b0b8fe",
-    "glob": "~3.2.6"
+    "glob": "~3.2.6",
+    "moxie-zip": "0.0.2"
   }
 }
