@@ -36,22 +36,81 @@ grunt.initConfig({
       debug: true // Optional boolean
     },
     package: {
-      groupId: "com.example", // Required
-      artifactId: "project",  // Optional, defaults to npm package name
-      sources: ["dist/**"],   // Required, sources to package
-      version: "6.6.6"        // Optional, defaults to npm version
+      groupId: "com.example",
+      artifactId: "project",
+      sources: ["dist/**"],
+      version: "6.6.6"
     },
     snapshot: {
-      url: "http://maven.example.com/snapshots",  // Required
-      id: "example-snaps" // Optional, useful if auth. is required.
+      url: "http://maven.example.com/snapshots",
+      id: "example-snaps"
     },
     release: {
-      url: "http://maven.example.com/releases",  // Required
-      id: "example-releases" // Optional, useful if auth. is required.
+      url: "http://maven.example.com/releases",
+      id: "example-releases"
     }
   }
 })
 ```
+
+### Options
+
+#### options.debug
+Type: `Boolean`  
+Default: false
+
+Whether or not the `--debug` flag should be passed to maven.
+
+#### package.groupId
+Type: `String`  
+Required
+
+Maven `groupId`, e.g. `com.yourcompany`.
+
+
+#### package.artifactId
+Type: `String` 
+Default: `name` field in `package.json`
+
+Name of artifact to publish.  This field will default to the `name` field in `package.json`.
+
+#### package.sources
+Type: `Array` 
+Required
+
+A list of glob-compatible paths to include in the package.
+
+#### package.version
+Type: `String` 
+Default: `version` field in `package.json`
+
+The version of the artifact to publish.  This field will default to the `version` field in `package.json`.
+
+If publishing to a snapshot respository `-SNAPSHOT` will automatically be appended.
+
+#### snapshot.url
+Type: `String` 
+Required
+
+URL to your snapshots repository
+
+#### snapshot.id
+Type: `String` 
+Optional
+
+The `id` of the snapshot repository if it is defined in your `settings.xml` file.  This option is useful if your repository requires authentication.
+
+#### release.url
+Type: `String` 
+Required
+
+URL to your snapshots repository
+
+#### release.id
+Type: `String` 
+Optional
+
+The `id` of the snapshot repository if it is defined in your `settings.xml` file.  This option is useful if your repository requires authentication.
 
 ## Contributing
 
@@ -60,3 +119,19 @@ style. Add unit tests for any new or changed functionality. Lint and test your
 code using [Grunt](http://gruntjs.com/).
 
 ## Release History
+
+### 0.5.5
+
+- Updated documentation
+
+- Added "mvn" and "maven" keywords to package file.
+
+### 0.5.1
+
+- Removed unused semver dependency
+
+- Replaced adm-zip with mozie-zip.
+
+### 0.5.0
+
+Initial release.
