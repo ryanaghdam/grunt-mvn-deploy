@@ -36,18 +36,18 @@ grunt.initConfig({
       debug: true // Optional boolean
     },
     package: {
-      groupId: "com.example", // Required
-      artifactId: "project",  // Optional, defaults to npm package name
-      sources: ["dist/**"],   // Required, sources to package
-      version: "6.6.6"        // Optional, defaults to npm version
+      groupId: "com.example",
+      artifactId: "project",
+      sources: ["dist/**"],
+      version: "6.6.6"
     },
     snapshot: {
-      url: "http://maven.example.com/snapshots",  // Required
-      id: "example-snaps" // Optional, useful if auth. is required.
+      url: "http://maven.example.com/snapshots",
+      id: "example-snaps"
     },
     release: {
-      url: "http://maven.example.com/releases",  // Required
-      id: "example-releases" // Optional, useful if auth. is required.
+      url: "http://maven.example.com/releases",
+      id: "example-releases"
     }
   }
 })
