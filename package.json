@@ -1,7 +1,7 @@
 {
   "name": "grunt-mvn-deploy",
   "description": "Deploy node projects to Maven.",
-  "version": "0.5.1",
+  "version": "0.5.5",
   "homepage": "https://github.com/ryanaghdam/grunt-mvn-deploy",
   "author": {
     "name": "Ryan Aghdam",
