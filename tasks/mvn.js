@@ -77,8 +77,10 @@ module.exports = function(grunt) {
     });
 
     // Write the zip file
+    var done = this.async();
     zip.saveAs(g("mvn.file"), function() {
       grunt.verbose.writeln("Wrote " + g("mvn.file"));
+      done();
     });
   });
 
